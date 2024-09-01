@@ -1,0 +1,160 @@
+/*--------- Ajuste no Corpo do Site ---------*/
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0; 
+    }
+
+/* Importação de Fontes (letras) */
+
+body{
+
+    font-size: 1em;
+}
+
+/* Layout */
+
+.container{
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* topo do site */
+
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+/*---------- Layout de Ajuste na Margem no PC ou Cell ----------*/
+
+/* Smartphone Portrait */
+
+/* cabeçalho */
+
+header{
+    height: 60px;
+}
+#logo img{
+
+    width: 128px;
+    height: 128px;
+}
+
+#check{
+    display: none;
+}
+
+label{
+    font-size: 3em;
+    padding-right: 15px;
+}
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ ul{
+    right: 0;
+}
+
+
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9a9;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff
+}
+
+/* Smartphone Landscape */
+
+@media (min-width: 576px){
+
+    /* Layout */
+    .container{
+        max-width: 540px;
+    }
+}
+
+/* Tablet Portrait */
+
+@media (min-width: 768px){
+
+    /* Layout */
+    .container{
+        max-width: 720px;
+    }
+
+}
+
+/* Smartphone Landscape */
+
+@media (min-width: 992px){
+
+    /* Layout */
+    .container{
+        max-width: 960px;
+    }
+
+}
+
+/* Pc */
+
+@media (min-width: 1200px){
+
+    /* Layout */
+    .container{
+        max-width: 1140px;
+    }
+
+    /* Cabeçalho */
+    header{
+        height: 120px;
+    }
+    #logo img{
+        width: 192px;
+        height: 192px;
+        margin-top: 30px;
+    }
+
+    label{
+        display: none;
+    }
+
+    nav ul{
+        position: static;
+        right: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a{
+        color: #343538;
+    }
+
+    nav ul li a:hover{
+        color: #c00000;
+    }
+}
