@@ -26,6 +26,11 @@ body{
     justify-content: space-between;
 }
 
+.flex2{
+    display: flex;
+    align-items: center;
+}
+
 .Botao{
     text-decoration: none;
     color: #fff;
@@ -44,6 +49,23 @@ body{
     right: 10px;
     bottom: 10px;
 }
+
+/* renderização das imagens- Topicos */
+
+.topicossobre img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+  }
+
+#destaquesobre img{
+
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+  
+  
 
 /*---------- Layout de Ajuste na Margem no PC ou Cell ----------*/
 
@@ -66,7 +88,11 @@ header{
 
 label{
     font-size: 3em;
-    padding-right: 15px;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0,0,0.5);
+
 }
 nav ul{
     list-style: none;
@@ -95,15 +121,22 @@ nav ul li a{
 }
 
 /* Destaque */
+
+main img{
+    
+}
+
 main{
     height: 75vh;
-    background: url(img/Banner.jpg);
+    background: url(img/Banner.jpg);    
     background-size: cover;
+    background-position: center;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 main h1{
@@ -113,6 +146,34 @@ main h1{
 main h2{
     font-size: 1em;
     margin: 20px 0px 50px 0px
+}
+
+/* Sobre */
+
+#sobre{
+    padding: 50px 0px;
+    background-position: center;
+}
+
+#destaquesobre{
+    display: none;
+}
+
+#textosobre{
+    color: #343538;
+    padding: 0px 10px
+}
+
+#textosobre h2{
+    margin-bottom: 10px;
+}
+
+.topicossobre{
+    margin-top: 20px;
+}
+
+.topicossobre img{
+    margin-right: 10px;
 }
 
 /* Smartphone Landscape */
@@ -215,4 +276,20 @@ main h2{
     nav ul li a:hover{
         color: #c00000;
     }
+
+    /* Sobre */
+
+    #sobre{
+        background-attachment: fixed;
+    }
+
+    #destaquesobre{
+        display: inline;
+    }
+
+    #destaquesobre img{
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
 }
